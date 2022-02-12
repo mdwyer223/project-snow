@@ -8,6 +8,10 @@ public static class SceneController {
     public static string getBedroomSceneName() {
         return "Scenes/Bedroom";
     }
+
+    public static string getTitleSceneName() {
+        return "Scenes/Title";
+    }
     
     public static void LoadScene(string sceneName) {
         SceneManager.LoadScene(sceneName);

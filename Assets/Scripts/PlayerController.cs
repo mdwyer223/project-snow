@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour {
 
     // Update is called once per tick
     void FixedUpdate() {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
 
         Vector2 movement = new Vector2(x, y);
         movement = movement.normalized;
