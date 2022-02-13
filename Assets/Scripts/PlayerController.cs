@@ -88,4 +88,17 @@ public class PlayerController : MonoBehaviour {
             resolver.ResolveSpriteToSpriteRenderer();
         }
     }
+
+    public void OnTriggerEnter2D(Collider2D collider) {
+        Debug.Log("Collision!");
+        string tag = collider.gameObject.tag;
+
+        Debug.Log(tag);
+
+        if (tag == "BedroomExit") {
+            SceneController.LoadScene(SceneController.getStarterTownSceneName());
+        } else if (tag == "QuestGiver") {
+            SceneController.LoadScene(SceneController.getEndCreditsSceneName());
+        }
+    }
 }

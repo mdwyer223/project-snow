@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BedroomEnvironment : MonoBehaviour {
+public class StarterTownEnvironment : MonoBehaviour {
 
     public GameObject pauseMenuPrefab;
     public GameObject playerPrefab;

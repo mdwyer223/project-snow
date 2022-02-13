@@ -6,7 +6,7 @@ public class MainMenuController : MonoBehaviour {
 
     public void StartGame() {
         Debug.Log("Start button clicked!");
-        SceneController.LoadScene(SceneController.getBedroomSceneName());
+        SceneController.LoadScene(SceneController.getIntroSceneName());
     }
 
     public void LoadGame() {

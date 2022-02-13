@@ -1,43 +1,43 @@
 fileFormatVersion: 2
-guid: 35c2508e65de16f439e31e8e52c2dcf5
+guid: 7fad53630aa86a940beb72651a62b117
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -599966528793606419
-    second: player-movement_0
+      213: 8921973671010959080
+    second: grove-ext_0
   - first:
-      213: -720312590958387705
-    second: player-movement_1
+      213: -534893697345576073
+    second: grove-ext_1
   - first:
-      213: -445828654490674758
-    second: player-movement_2
+      213: -336002894886490962
+    second: grove-ext_2
   - first:
-      213: 8628172774153874042
-    second: player-movement_3
+      213: -1390520690517710531
+    second: grove-ext_3
   - first:
-      213: -8681547488557951196
-    second: player-movement_4
+      213: 7605163152273390684
+    second: grove-ext_4
   - first:
-      213: -5548002983080928729
-    second: player-movement_5
+      213: -6000400091597198709
+    second: grove-ext_5
   - first:
-      213: 760586917118802893
-    second: player-movement_6
+      213: 1141278541119668802
+    second: grove-ext_6
   - first:
-      213: 6672626533192947636
-    second: player-movement_7
+      213: -186357084155403887
+    second: grove-ext_7
   - first:
-      213: -6768162477836142059
-    second: player-movement_8
+      213: -8008405878503097932
+    second: grove-ext_8
   - first:
-      213: 6912623807670879252
-    second: player-movement_9
+      213: -9076126920388869664
+    second: grove-ext_9
   - first:
-      213: -8352334930075769056
-    second: player-movement_10
+      213: -2837786665840320328
+    second: grove-ext_10
   - first:
-      213: 3902793166663871737
-    second: player-movement_11
+      213: 5247734879202923053
+    second: grove-ext_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +101,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -113,7 +113,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -125,7 +125,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player-movement_0
+      name: grove-ext_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 144
-        width: 48
-        height: 48
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de6022eee9d7ca7f0800000000000000
-      internalID: -599966528793606419
+      spriteID: 8eefefb78c731db70800000000000000
+      internalID: 8921973671010959080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-movement_1
+      name: grove-ext_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 144
-        width: 48
-        height: 48
+        x: 64
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70e1fa0d38fe006f0800000000000000
-      internalID: -720312590958387705
+      spriteID: 7732f19240da398f0800000000000000
+      internalID: -534893697345576073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-movement_2
+      name: grove-ext_2
       rect:
         serializedVersion: 2
-        x: 96
-        y: 144
-        width: 48
-        height: 48
+        x: 128
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,83 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab9946a633910d9f0800000000000000
-      internalID: -445828654490674758
+      spriteID: eaca9c6b527465bf0800000000000000
+      internalID: -336002894886490962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-movement_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7a63209c6d6db770800000000000000
-      internalID: 8628172774153874042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player-movement_4
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42791d35e82f48780800000000000000
-      internalID: -8681547488557951196
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player-movement_5
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72a57a47ea88103b0800000000000000
-      internalID: -5548002983080928729
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player-movement_6
+      name: grove-ext_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
-        width: 48
-        height: 48
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcbfca775c52e8a00800000000000000
-      internalID: 760586917118802893
+      spriteID: d396cdc9cc0e3bce0800000000000000
+      internalID: -1390520690517710531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-movement_7
+      name: grove-ext_4
       rect:
         serializedVersion: 2
-        x: 48
-        y: 48
-        width: 48
-        height: 48
+        x: 64
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b7dfc59a7ee99c50800000000000000
-      internalID: 6672626533192947636
+      spriteID: c5c3526d797fa8960800000000000000
+      internalID: 7605163152273390684
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-movement_8
+      name: grove-ext_5
       rect:
         serializedVersion: 2
-        x: 96
-        y: 48
-        width: 48
-        height: 48
+        x: 128
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,20 +258,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51af27ee518a212a0800000000000000
-      internalID: -6768162477836142059
+      spriteID: b8aa02e78eb4abca0800000000000000
+      internalID: -6000400091597198709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-movement_9
+      name: grove-ext_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 242c63159c2a6df00800000000000000
+      internalID: 1141278541119668802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grove-ext_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1912a85283de96df0800000000000000
+      internalID: -186357084155403887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grove-ext_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b93caaa84d6cd090800000000000000
+      internalID: -8008405878503097932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grove-ext_9
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48
-        height: 48
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,20 +342,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 414812a7ab29eef50800000000000000
-      internalID: 6912623807670879252
+      spriteID: 0e18cdd37ae1b0280800000000000000
+      internalID: -9076126920388869664
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-movement_10
+      name: grove-ext_10
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 0
-        width: 48
-        height: 48
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,20 +363,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0272fb732ab861c80800000000000000
-      internalID: -8352334930075769056
+      spriteID: 8b06f3a00182e98d0800000000000000
+      internalID: -2837786665840320328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-movement_11
+      name: grove-ext_11
       rect:
         serializedVersion: 2
-        x: 96
+        x: 128
         y: 0
-        width: 48
-        height: 48
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,8 +384,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fc62da05b1892630800000000000000
-      internalID: 3902793166663871737
+      spriteID: d225156a113b3d840800000000000000
+      internalID: 5247734879202923053
       vertices: []
       indices: 
       edges: []
