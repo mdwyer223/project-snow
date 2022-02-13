@@ -1,35 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.U2D.Animation;
 
 public class PlayerController : MonoBehaviour {
 
+    enum Direction {
+        Left, Right, Up, Down
+    }
+
     public float movementSpeed = 5f;
 
-    public List<Sprite> walkLeftFrames;
-    public List<Sprite> walkRightFrames;
-    public List<Sprite> walkUpFrames;
-    public List<Sprite> walkDownFrames;
-
-    int frameCounter;
-    int frameTickCounter;
-    int frameTickSwitch;
-    int numFrames;
-
     Rigidbody2D body;
+
+    SpriteResolver resolver;
     SpriteRenderer sprite;
+
+    string spriteDirection;
+    string spriteCategory;
+    string spriteLabel;
+
+    string previousSpriteCategory;
+    string previousSpriteLabel;
+
+    float idleTime;
+    int frameRate = 8;
 
     Vector2 movement;
 
     void Start() {
         body = GetComponent<Rigidbody2D>();
-        sprite = GetComponent<SpriteRenderer>();
 
-        frameCounter = 0;
-        frameTickCounter = 0;
-        frameTickSwitch = 214;
-        numFrames = 4;
+        sprite = GetComponent<SpriteRenderer>();
+        resolver = GetComponent<SpriteResolver>();
+
         movement = new Vector2();
+
+        spriteDirection = Direction.Down.ToString();
+        spriteCategory = "WalkDown";
+        spriteLabel = "1";
     }
 
     // Update is called once per frame
@@ -38,47 +47,45 @@ public class PlayerController : MonoBehaviour {
         UpdateSprite();
     }
 
-    // Update is called once per tick
-    void FixedUpdate() {
-        body.velocity = (movement * movementSpeed);
-    }
-
     void MovementInput() {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
         movement = new Vector2(x, y).normalized;
+        body.velocity = (movement * movementSpeed);
     }
 
     void UpdateSprite() {
-        frameTickCounter++;
-        if (frameTickCounter % frameTickSwitch == 0) {
-            frameTickCounter = 0;
-        } else {
-            return;
-        }
+        previousSpriteCategory = spriteCategory;
+        previousSpriteLabel = spriteLabel;
 
-        Sprite frame = walkDownFrames[0];
-        if (movement.x == 0 && movement.y == 0) {
-            frameCounter = 0;
-        }
         if (movement.y > 0) {
-            frame = walkUpFrames[frameCounter];
+            spriteDirection = Direction.Up.ToString();
         } else if (movement.y < 0) {
-            frame = walkDownFrames[frameCounter];
+            spriteDirection = Direction.Down.ToString();
         }
+
         if (movement.x > 0) {
-            frame = walkRightFrames[frameCounter];
+            spriteDirection = Direction.Right.ToString();
         } else if (movement.x < 0) {
-            frame = walkLeftFrames[frameCounter];
+            spriteDirection = Direction.Left.ToString();
         }
 
+        spriteCategory = "Walk" + spriteDirection;
+        if (movement.x == 0 && movement.y == 0) {
+            spriteLabel = "1";
+            idleTime = Time.time;
+        } else {
+            float playTime = Time.time - idleTime;
+            int totalFrames = (int)(playTime * frameRate);
+            int frame = totalFrames % 4;
 
+            spriteLabel = frame.ToString();
+        }
 
-        sprite.sprite = frame;
-        frameCounter++;
-        if (frameCounter >= numFrames) {
-            frameCounter = 0;
+        if (spriteCategory != previousSpriteCategory || spriteLabel != previousSpriteLabel) {
+            resolver.SetCategoryAndLabel(spriteCategory, spriteLabel);
+            resolver.ResolveSpriteToSpriteRenderer();
         }
     }
 }
