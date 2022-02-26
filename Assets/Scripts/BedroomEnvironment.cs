@@ -16,7 +16,5 @@ public class BedroomEnvironment : MonoBehaviour {
 
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         GameObject cameraObject = GameObject.FindGameObjectWithTag("MainCamera");
-
-        cameraObject.GetComponent<TargetCameraController>().SetTarget(playerObject.gameObject);
     }
 }

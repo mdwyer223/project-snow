@@ -6,7 +6,9 @@ TagManager:
   tags:
   - PauseMenu
   - BedroomExit
-  - QuestGiver
+  - NpcQuestGiver
+  - Npc
+  - PlayerInteract
   layers:
   - Default
   - TransparentFX

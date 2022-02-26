@@ -4,12 +4,20 @@ using UnityEngine;
 using UnityEngine.Experimental.U2D.Animation;
 
 public class PlayerController : MonoBehaviour {
+    public static PlayerController Instance;
+
+    [SerializeField]
+    private float movementSpeed;
+
+    [SerializeField]
+    private int frameRate;
+
+    [SerializeField]
+    private GameObject interactBox;
 
     enum Direction {
         Left, Right, Up, Down
     }
-
-    public float movementSpeed = 5f;
 
     Rigidbody2D body;
 
@@ -24,11 +32,15 @@ public class PlayerController : MonoBehaviour {
     string previousSpriteLabel;
 
     float idleTime;
-    int frameRate = 8;
+
+    bool playerPaused = false;
+    bool cameraTargeted = false;
 
     Vector2 movement;
 
     void Start() {
+        Instance = this;
+
         body = GetComponent<Rigidbody2D>();
 
         sprite = GetComponent<SpriteRenderer>();
@@ -41,10 +53,27 @@ public class PlayerController : MonoBehaviour {
         spriteLabel = "1";
     }
 
-    // Update is called once per frame
     void Update() {
+        if (playerPaused) {
+            body.velocity = Vector2.zero;
+            return;
+        }
+
+        if (!cameraTargeted) {
+            CameraManager.Instance.SetTarget(this.gameObject.transform);
+            cameraTargeted = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            Interact();
+        }
+
         MovementInput();
         UpdateSprite();
+    }
+
+    void Interact() {
+        interactBox.SetActive(true);
     }
 
     void MovementInput() {
@@ -84,21 +113,32 @@ public class PlayerController : MonoBehaviour {
         }
 
         if (spriteCategory != previousSpriteCategory || spriteLabel != previousSpriteLabel) {
+            UpdateInteractBox();
             resolver.SetCategoryAndLabel(spriteCategory, spriteLabel);
             resolver.ResolveSpriteToSpriteRenderer();
         }
     }
 
-    public void OnTriggerEnter2D(Collider2D collider) {
-        Debug.Log("Collision!");
-        string tag = collider.gameObject.tag;
-
-        Debug.Log(tag);
-
-        if (tag == "BedroomExit") {
-            SceneController.LoadScene(SceneController.getStarterTownSceneName());
-        } else if (tag == "QuestGiver") {
-            SceneController.LoadScene(SceneController.getEndCreditsSceneName());
+    void UpdateInteractBox() {
+        Vector3 playerPosition = this.transform.position;
+        if (spriteDirection == Direction.Up.ToString()) {
+            interactBox.gameObject.transform.position =  playerPosition + new Vector3(0, .6f);
+        } else if (spriteDirection == Direction.Down.ToString()) {
+            interactBox.gameObject.transform.position = playerPosition + new Vector3(0, -.6f);
+        } else if (spriteDirection == Direction.Left.ToString()) {
+            interactBox.gameObject.transform.position = playerPosition + new Vector3(-.6f, 0);
+        } else if (spriteDirection == Direction.Right.ToString()) {
+            interactBox.gameObject.transform.position =  playerPosition + new Vector3(.6f, 0);
+        } else {
+            interactBox.gameObject.transform.position = playerPosition + new Vector3(0, 0);
         }
+    }
+
+    public void PausePlayer() {
+        playerPaused = true;
+    }
+
+    public void ResumePlayer() {
+        playerPaused = false;
     }
 }
